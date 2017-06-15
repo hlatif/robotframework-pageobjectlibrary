@@ -55,7 +55,8 @@ class PageObjectLibraryKeywords(object):
             # old order, preserve the old but make sure our
             # page is at the front of the list
             old_order = self.builtin.set_library_search_order()
-            new_order = ([str(page)],) + old_order
+            #new_order = ([str(page)],) + old_order
+            new_order = str(page)
             self.builtin.set_library_search_order(new_order)
             return
 
